@@ -8,11 +8,9 @@
   }
   
   body {
-    @apply font-sans text-gray-800 bg-white;
-  }
-  
-  * {
-    @apply border-border;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
   }
 }
 
