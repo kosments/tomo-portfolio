@@ -1,0 +1,263 @@
+# Tomo Portfolio Site - 開発ルール
+
+## プロジェクト概要
+カナダでのアウトドアライフスタイルを表現するポートフォリオサイト。
+写真主役のミニマルでモダンなSPAとして構築。
+
+## 技術スタック
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+## コーディング規約
+
+### TypeScript
+- 厳密な型定義を使用
+- any型の使用禁止
+- インターフェースは types/index.ts で管理
+- コンポーネントのProps型は必須
+
+### React/Next.js
+- 関数コンポーネントのみ使用
+- Server Componentsを優先
+- Client Componentsは必要最小限（'use client'を明記）
+- カスタムフックは lib/ ディレクトリに配置
+
+### ファイル・ディレクトリ命名
+- コンポーネント: PascalCase (Hero.tsx, About.tsx)
+- ファイル: kebab-case (utils.ts, constants.ts)
+- ディレクトリ: kebab-case (sections/, ui/)
+- 画像: kebab-case (hero-background.jpg)
+
+### CSS/Tailwind
+- Tailwind CSS クラスのみ使用
+- カスタムCSSは globals.css の @layer で管理
+- レスポンシブデザイン必須 (mobile-first)
+- ダークモード対応（将来実装）
+
+### コンポーネント設計
+- 単一責任の原則
+- Props の型定義必須
+- デフォルトProps の使用
+- 再利用可能なUI コンポーネントは ui/ に配置
+
+### 画像管理
+- next/image コンポーネント必須
+- alt属性必須（アクセシビリティ）
+- WebP形式推奨
+- 適切なサイズでの配置
+
+### アニメーション
+- Framer Motion使用
+- 控えめなアニメーション（写真優先）
+- パフォーマンスを考慮した実装
+- prefers-reduced-motion 対応
+
+### パフォーマンス
+- Core Web Vitals 目標: LCP < 2.5s, FID < 100ms, CLS < 0.1
+- 画像の最適化必須
+- 不要なライブラリの追加禁止
+- バンドルサイズの監視
+
+### SEO
+- メタデータの適切な設定
+- セマンティックHTML使用
+- 構造化データ対応（将来実装）
+- sitemap.xml 生成
+
+### アクセシビリティ
+- WCAG 2.1 AA準拠
+- キーボードナビゲーション対応
+- スクリーンリーダー対応
+- 適切なコントラスト比
+
+## Git規約
+
+### ブランチ戦略
+- main: 本番環境
+- develop: 開発環境
+- feature/[機能名]: 機能開発
+- hotfix/[修正内容]: 緊急修正
+
+### コミットメッセージ
+```
+<type>: <description>
+
+Types:
+- feat: 新機能
+- fix: バグ修正
+- docs: ドキュメント
+- style: スタイル変更
+- refactor: リファクタリング
+- test: テスト
+- chore: その他
+
+例:
+feat: Heroセクションにパララックス効果を追加
+fix: ギャラリー画像のレスポンシブ表示を修正
+docs: READMEにセットアップ手順を追加
+```
+
+### プルリクエスト
+- 機能単位での作成
+- レビュー必須
+- テスト通過必須
+- コンフリクト解決必須
+
+## ディレクトリ構造規約
+
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── globals.css     # グローバルスタイル
+│   ├── layout.tsx      # ルートレイアウト
+│   └── page.tsx        # ホームページ
+├── components/         # コンポーネント
+│   ├── sections/       # セクションコンポーネント
+│   ├── ui/            # 再利用可能UIコンポーネント
+│   └── layout/        # レイアウトコンポーネント
+├── lib/               # ユーティリティ関数
+├── data/              # 静的データ
+├── types/             # TypeScript型定義
+└── hooks/             # カスタムフック（将来使用）
+
+public/
+└── images/            # 画像ファイル
+    ├── hero/          # Hero背景画像
+    ├── gallery/       # ギャラリー画像
+    └── activities/    # アクティビティ画像
+
+docs/                  # ドキュメント
+├── design.md         # 設計書
+├── development.md    # 開発ガイド
+└── deployment.md     # デプロイガイド
+```
+
+## コード品質
+
+### ESLint設定
+- Next.js推奨設定使用
+- TypeScript strict モード
+- 未使用変数・インポートの警告
+- console.log の本番環境での警告
+
+### Prettier設定
+```json
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 80
+}
+```
+
+### TypeScript設定
+- strict モード有効
+- noImplicitAny: true
+- strictNullChecks: true
+- noUnusedLocals: true
+
+## テスト戦略
+
+### 単体テスト（将来実装）
+- Jest + React Testing Library
+- コンポーネントテスト
+- カバレッジ80%以上
+
+### E2Eテスト（将来実装）
+- Playwright使用
+- 主要ユーザーフロー
+- クロスブラウザテスト
+
+## デプロイメント
+
+### 環境
+- 開発: localhost:3000
+- 本番: Vercel
+
+### 自動化
+- main ブランチへのpushで自動デプロイ
+- PRでプレビューデプロイ
+- Lighthouse CI実行
+
+## セキュリティ
+
+### 基本方針
+- 依存関係の定期更新
+- セキュリティヘッダー設定
+- 入力値のサニタイズ（将来のフォーム実装時）
+
+### 監査
+- npm audit 定期実行
+- Dependabot有効化
+- セキュリティアラート対応
+
+## パフォーマンス監視
+
+### 指標
+- Core Web Vitals
+- Lighthouse スコア
+- バンドルサイズ
+- 画像最適化率
+
+### ツール
+- Vercel Analytics
+- Vercel Speed Insights
+- Bundle Analyzer
+
+## ドキュメント管理
+
+### 必須ドキュメント
+- README.md: プロジェクト概要・セットアップ
+- docs/design.md: 設計書
+- docs/development.md: 開発ガイド
+- docs/deployment.md: デプロイガイド
+
+### 更新ルール
+- 機能追加時はドキュメント更新必須
+- APIの変更時は型定義更新必須
+- 設計変更時は設計書更新必須
+
+## 引き継ぎ要件
+
+### 必要な情報
+- プロジェクト概要と目的
+- 技術スタック詳細
+- 開発・デプロイ手順
+- トラブルシューティング
+
+### アカウント情報
+- GitHub リポジトリアクセス
+- Vercel プロジェクトアクセス
+- ドメイン管理（該当する場合）
+
+## 禁止事項
+
+### 技術的禁止事項
+- jQuery等の古いライブラリ使用
+- インラインスタイルの使用
+- any型の使用
+- console.log の本番環境残存
+
+### 設計的禁止事項
+- 過度なアニメーション
+- 不必要な機能追加
+- パフォーマンスを犠牲にした実装
+- アクセシビリティを無視した実装
+
+## 推奨事項
+
+### 開発効率
+- VS Code + 推奨拡張機能使用
+- GitHub Copilot 活用
+- 定期的なリファクタリング
+- コードレビューの積極的実施
+
+### 品質向上
+- 段階的な機能追加
+- ユーザーフィードバックの収集
+- パフォーマンス測定の習慣化
+- 継続的な学習と改善
