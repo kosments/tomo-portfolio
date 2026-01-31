@@ -3,7 +3,7 @@ export interface Photo {
   src: string
   title?: string
   location?: string
-  category?: 'landscape' | 'activity' | 'lifestyle'
+  category?: 'Landscape' | 'Mountain' | 'Nature' | 'Water' | 'Activity' | 'Lifestyle'
   alt: string
 }
 
