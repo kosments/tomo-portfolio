@@ -30,7 +30,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&crop=center"
+          src="https://picsum.photos/1920/1080?random=hero"
           alt="カナダの美しい山岳風景"
           fill
           className="object-cover opacity-80"

@@ -45,7 +45,7 @@ export default function About() {
         >
           <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face"
+              src="https://picsum.photos/600/750?random=profile"
               alt="Tomoのプロフィール写真"
               fill
               className="object-cover"

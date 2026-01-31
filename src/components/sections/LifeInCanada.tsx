@@ -20,7 +20,7 @@ export default function LifeInCanada() {
           >
             <div className="aspect-video overflow-hidden shadow-xl rounded-2xl">
               <Image 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop&crop=center"
+                src="https://picsum.photos/1600/900?random=canada"
                 alt="カナダの美しい湖畔の風景" 
                 width={1600}
                 height={900}

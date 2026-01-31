@@ -3,7 +3,7 @@ import { Photo } from '@/types'
 export const photos: Photo[] = [
   {
     id: '1',
-    src: 'https://images.unsplash.com/photo-1464822759844-d150baec0494?w=1600&h=900&fit=crop',
+    src: 'https://picsum.photos/1600/900?random=1',
     title: 'Emerald Lake',
     location: 'British Columbia',
     category: 'Landscape',
@@ -11,7 +11,7 @@ export const photos: Photo[] = [
   },
   {
     id: '2',
-    src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=1600&fit=crop',
+    src: 'https://picsum.photos/1200/1600?random=2',
     title: 'Misty Peaks',
     location: 'Alberta',
     category: 'Mountain',
@@ -19,7 +19,7 @@ export const photos: Photo[] = [
   },
   {
     id: '3',
-    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=1200&fit=crop',
+    src: 'https://picsum.photos/1600/1200?random=3',
     title: 'Northern Woods',
     location: 'Yukon',
     category: 'Nature',
@@ -27,7 +27,7 @@ export const photos: Photo[] = [
   },
   {
     id: '4',
-    src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&h=900&fit=crop',
+    src: 'https://picsum.photos/1600/900?random=4',
     title: 'Glacial Blue',
     location: 'Banff',
     category: 'Landscape',
@@ -35,7 +35,7 @@ export const photos: Photo[] = [
   },
   {
     id: '5',
-    src: 'https://images.unsplash.com/photo-1486022479012-cf8ea2e84c6e?w=1200&h=1600&fit=crop',
+    src: 'https://picsum.photos/1200/1600?random=5',
     title: 'Forest Path',
     location: 'Vancouver Island',
     category: 'Nature',
@@ -43,7 +43,7 @@ export const photos: Photo[] = [
   },
   {
     id: '6',
-    src: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1600&h=900&fit=crop',
+    src: 'https://picsum.photos/1600/900?random=6',
     title: 'Silent Morning',
     location: 'Muskoka',
     category: 'Water',
@@ -51,7 +51,7 @@ export const photos: Photo[] = [
   },
   {
     id: '7',
-    src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&h=900&fit=crop',
+    src: 'https://picsum.photos/1600/900?random=7',
     title: 'Autumn Reflection',
     location: 'Quebec',
     category: 'Landscape',
@@ -59,7 +59,7 @@ export const photos: Photo[] = [
   },
   {
     id: '8',
-    src: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1600&h=900&fit=crop',
+    src: 'https://picsum.photos/1600/900?random=8',
     title: 'Mountain Vista',
     location: 'Rocky Mountains',
     category: 'Mountain',
@@ -67,7 +67,7 @@ export const photos: Photo[] = [
   },
   {
     id: '9',
-    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
+    src: 'https://picsum.photos/1600/900?random=9',
     title: 'Lake Serenity',
     location: 'Lake Louise',
     category: 'Water',
