@@ -23,6 +23,10 @@
 - **Icons**: Lucide React
 - **Deployment**: Vercel
 
+## 🚀 ライブサイト
+
+**本番サイト**: https://tomo-portfolio-sigma.vercel.app
+
 ## セットアップ
 
 ### 前提条件
@@ -34,7 +38,7 @@
 
 ```bash
 # リポジトリをクローン
-git clone <repository-url>
+git clone https://github.com/kosments/tomo-portfolio.git
 cd tomo-portfolio
 
 # 依存関係をインストール
@@ -120,9 +124,13 @@ docs/                   # ドキュメント
 
 ### Vercel（推奨）
 
+✅ **既にデプロイ済み**: https://tomo-portfolio-sigma.vercel.app
+
 1. GitHubリポジトリをVercelに接続
 2. 自動デプロイが設定されます
 3. カスタムドメインを設定（オプション）
+
+**自動デプロイ**: `master`ブランチへのpushで自動的に本番環境が更新されます。
 
 詳細は [docs/deployment.md](docs/deployment.md) を参照してください。
 
