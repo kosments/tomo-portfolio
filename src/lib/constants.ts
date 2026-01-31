@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: 'Tomo Portfolio',
   title: 'Tomo - Life in Canada',
   description: 'カナダでのアウトドアライフスタイルを写真で表現するポートフォリオサイト',
-  url: 'https://tomo-portfolio.vercel.app',
+  url: 'https://tomo-portfolio-sigma.vercel.app',
   author: 'Tomo',
   keywords: 'portfolio, canada, outdoor, photography, lifestyle, adventure',
 } as const
