@@ -166,10 +166,24 @@ docs/                   # ドキュメント
 - **デザイン相談**: [連絡先]
 - **緊急時**: [緊急連絡先]
 
+## 📸 画像の差し替え
+
+現在はプレースホルダー画像（Picsum.photos）を使用しています。
+実際の撮影写真に差し替える場合は、[画像差し替えガイド](docs/image-replacement.md)を参照してください。
+
+### 簡単な差し替え手順
+
+1. 写真を `public/images/` に配置
+2. コンポーネントのsrcを `/images/your-photo.jpg` に変更
+3. ビルド・デプロイ
+
+詳細は専用ガイドをご確認ください。
+
 ## 参考資料
 
 - [設計書](docs/design.md)
 - [開発ガイド](docs/development.md)
 - [デプロイガイド](docs/deployment.md)
+- [画像差し替えガイド](docs/image-replacement.md)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
